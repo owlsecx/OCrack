@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Link Ocrack
+OCrack is a professional hash and password auditing tool for authorised recovery and strength testing. It combines dictionary, mutation, mask, and related attack modes with hash identification so defenders can validate credentials and measure password policy effectiveness. Reports and logging support lab and assessment workflows.
 
 ---
 
 ## ✨ Features
 
-- Advanced password and hash cracker supporting dictionary.
+- Dictionary cracking with optional mutation rules against a target hash
+- Mask attacks and batch mode for files of many hashes
+- Hash type identification and hash generation helpers for known plaintext
+- Multi-threaded cracking with configurable worker count
+- JSON report output and optional file logging for audit trails
+- Modes spanning dictionary, brute force, rainbow, hybrid, PCFG, combinator, and Markov-style analysis
 
 ---
 
@@ -38,7 +43,10 @@ Link Ocrack
 ## 🚀 Usage
 
 ```bash
-./Ocrack
+./Ocrack -i 5f4dcc3b5aa765d61d8327deb882cf99
+./Ocrack -H 5f4dcc3b5aa765d61d8327deb882cf99 -w rockyou.txt -m
+./Ocrack -b hashes.txt -w wordlist.txt -t 8 -o report.json
+./Ocrack --help
 ```
 
 ---
